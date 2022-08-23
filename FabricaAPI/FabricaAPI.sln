@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabricaAPI", "FabricaAPI\FabricaAPI.csproj", "{66BF2A75-BF7B-4F33-AFF8-56558C428279}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66BF2A75-BF7B-4F33-AFF8-56558C428279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BF2A75-BF7B-4F33-AFF8-56558C428279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BF2A75-BF7B-4F33-AFF8-56558C428279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BF2A75-BF7B-4F33-AFF8-56558C428279}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0E09290-7ACC-490C-88DE-1E1D36952429}
+	EndGlobalSection
+EndGlobal

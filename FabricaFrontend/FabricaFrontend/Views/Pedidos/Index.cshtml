@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Lista Pedidos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Pedidos</h1>
+   
+</div>
+<div class="card">
+    <div class="card-header">
+       Lista Pedidos
+    </div>
+    <div class="card-body">
+
+        <a asp-action="Pedido" asp-controller="Pedidos" asp-route-idPedido="0" class="btn btn-success btn-sm">Nuevo Pedido</a>
+        <hr />
+       
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>PedId</th>
+                    <th>PedUsu</th>
+                    <th>PedPro</th>
+                    <th>PedVrUnit</th>
+                    <th>PedCant</th>
+                    <th>PedSubtot</th>
+                    <th>PedIva</th>
+                    <th>PedTotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.pedId</td>
+                        <td>@item.oUsuario.usuNombre</td>
+                        <td>@item.oProducto.proDesc</td>
+                        <td>@item.pedVrUnit</td>
+                        <td>@item.pedCant</td>
+                        <td>@item.pedSubtot</td>
+                        <td>@item.pedIva</td>
+                        <td>@item.pedTotal</td>
+                        <td>
+                            <a asp-action="Pedido" asp-controller="Pedidos" asp-route-idPedido="@item.pedId" class="btn btn-primary btn-sm">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Pedidos" asp-route-idPedido="@item.pedId" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

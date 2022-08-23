@@ -1,0 +1,57 @@
+﻿@model Pedido
+@{
+    ViewData["Title"] = "Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+       @ViewBag.Accion
+    </div>
+    <div class="card-body">
+        <form asp-action="GuardarCambios" asp-controller="Pedidos" method="post">
+            <input asp-for="pedId" type="hidden"/>
+            <div class="mb-2">
+                <label class="form-label">Usuario Pedido</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedUsu" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Producto</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedPro" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Valor Unidad</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedVrUnit" />
+            </div>
+             <div class="mb-2">
+                <label class="form-label">Cantidad</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedCant" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">SubTotal</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedSubtot" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">IVA</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedIva" />
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Total</label>
+                <input type="text" class="form-control form-control-sm" asp-for="pedTotal" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-sm">Guardar Cambios</button>
+
+
+            <a asp-action="Index" asp-controller="Pedidos" class="btn btn-warning btn-sm">Volver</a>
+
+
+
+            
+        </form>
+
+       
+
+        
+
+    </div>
+</div>

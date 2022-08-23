@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Lista Usuarios";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Usuarios</h1>
+   
+</div>
+<div class="card">
+    <div class="card-header">
+       Lista Usuarios
+    </div>
+    <div class="card-body">
+
+        <a asp-action="Usuario" asp-controller="Usuarios" asp-route-idUsuario="0" class="btn btn-success btn-sm">Nuevo Pedido</a>
+        <hr />
+       
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>usuId</th>
+                    <th>usuNombre</th>
+                    <th>usuPass</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.usuId</td>
+                        <td>@item.usuNombre</td>
+                        <td>@item.usuPass</td>
+                       
+                        <td>
+                            <a asp-action="Usuario" asp-controller="Usuarios" asp-route-idUsuario="@item.usuId" class="btn btn-primary btn-sm">Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Usuarios" asp-route-idUsuario="@item.usuId" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
